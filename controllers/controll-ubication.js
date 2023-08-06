@@ -1,7 +1,6 @@
 const ubication = require('../models/ubication')
 
 module.exports= {
-
     obtainAll: async (req, res)=>{
         try{
             const data = await ubication.find()
@@ -35,7 +34,7 @@ module.exports= {
     findByID: async(req, res)=>{
         try{
             const {idUbication} = req.params
-            const dataUbication= await ubication.findByID(idUbication)
+            const dataUbication= await ubication.findById(idUbication)
             res.status(200).json({
                 "status": true,
                 "data": dataUbication

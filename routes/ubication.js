@@ -5,8 +5,8 @@ const {obtainAll, addUbication, findByID, erase, update} = require ('../controll
 
 router.get('/', obtainAll)
 router.post('/', addUbication)
-router.get('/:idGuest', findByID)
-router.delete('/:idGuest', erase)
-router.put('/:idGuest', update)
+router.get('/:idUbication', findByID)
+router.delete('/:idUbication', erase)
+router.put('/:idUbication', update)
 
 module.exports = router
