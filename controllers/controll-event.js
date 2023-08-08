@@ -6,7 +6,6 @@ module.exports= {
             const data = await event.find()
                         .populate('guest')
                         .populate('organizer')
-                        .populate('ubication')
             return res.status(200).json({
                 "status": true,
                 "data": data
@@ -40,7 +39,6 @@ module.exports= {
             const dataEvent = await event.findOne({id: idEvent})
                 .populate('guest')
                 .populate('organizer')
-                .populate('ubication')
             res.status(200).json({
                 "status": true,
                 "data": dataEvent

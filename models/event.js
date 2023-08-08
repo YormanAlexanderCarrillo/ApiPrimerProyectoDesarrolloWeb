@@ -4,20 +4,20 @@ const { Schema } = mongoose
 const eventSchema = new Schema({
     id: {
         type: Number,
-        require: true,
+        required: true,
         unique: true
     },
     title: {
         type: String,
-        require: true
+        required: true
     },
     description: {
         type: String,
-        require: true
+        required: true
     },
     dateInitial: {
         type: Date,
-        require: true
+        required: true
     },
     dateFinish: {
         type: Date,
@@ -27,6 +27,16 @@ const eventSchema = new Schema({
         type: Number,
         required: true
     },
+    location: {
+        longitude: {
+            type: Number,
+            required: true
+        },
+        latitude: {
+            type: Number,
+            required: true
+        }
+    },
     guest: {
         type: Schema.Types.ObjectId,
         ref: 'guest'
@@ -34,10 +44,6 @@ const eventSchema = new Schema({
     organizer: {
         type: Schema.Types.ObjectId,
         ref: 'organizer'
-    },
-    ubication: {
-        type: Schema.Types.ObjectId,
-        ref: 'ubication'
     }
 })
 
